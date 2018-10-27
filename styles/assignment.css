@@ -5,7 +5,7 @@ html {
   padding:2em;
 }
 
-head {
+head, h1, h2, h3 {
   font-family: "Noto Sans", sans-serif;
 }
 
@@ -18,8 +18,7 @@ h2 {
   font-size: 1em;
 }
 
+
 body {
   font-family: "Slabo 27px", serif;
 }
-
-@media screen and (max-width: 600px)
