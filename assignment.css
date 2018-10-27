@@ -1,1 +1,24 @@
+html {
+  font-size: 100%;
+  color: #000000;
+  background: #a9a9a9;
+  padding:2em;
+}
 
+head, h1, h2, h3 {
+  font-family: "Noto Sans", sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h2 {
+  line-height: 1em;
+  font-size: 1em;
+}
+
+
+body {
+  font-family: "Slabo 27px", serif;
+}

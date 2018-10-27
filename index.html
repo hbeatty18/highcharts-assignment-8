@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Spotlight on Juvenile Crime </title>
 
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Slabo+27px" rel="stylesheet">
+  <link rel="stylesheet" href="styles/assignment.css">
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+</head>
+
+<body>
+<h1> Spotlight on Juvenile Crime </h1>
+<h2>by Hannah Beatty</h2>
+<h2> Questions? Tweet them to me @hannahbeatty_ </h2>
+
+<h3> Juvenile Crime in 2017</h3>
+
+<p> The conversation around criminal justice and criminality has reached a new peak as a new genre in infotainment now includes a popular subgenre encompassing crime. Podcasts such as "My Favorite Murder" and Netflix shows such as "Making a Murderer" have received critical and cultural acclaim forcing lawmakers and voters to take new looks at our justice system. That being said, the spotlight has not yet reached minors who commit felonies. In 2017, the FBI found that 634,535 out of 8,247, 591 (7.6%) felonies are committed by those under age. The column graph below shows what types of felonies minors committed in 2017. </p>
+
+<div id= "container"></div>
+
+<script>
+Highcharts.setOptions ({
+  lang: {
+    thousandsSep: ','
+  }
+});
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Crimes Committed by People Under 18 in 2017'
+    },
+    subtitle: {
+        text: 'Source: FBI UCR <a href="https://ucr.fbi.gov/crime-in-the-u.s/2017/crime-in-the-u.s.-2017/topic-pages/tables/table-41"> - Table 41</a>'
+    },
+    xAxis: {
+        type: 'category',
+        labels: {
+            rotation: -45,
+            style: {
+                fontSize: '13px',
+                fontFamily: 'Verdana, sans-serif'
+            }
+        }
+    },
+    yAxis: {
+        min: 700,
+        title: {
+            text: 'Number of Offenses'
+        }
+    },
+    legend: {
+        enabled: false
+    },
+    tooltip: {
+        pointFormat: 'Number of Offenses in 2017: <b>{point.y:,.0f}</b>'
+
+    },
+    series: [{
+        name: 'Offenses',
+        data: [
+            ['Murder', 717],
+            ['Rape', 3030],
+            ['Robbery', 15282],
+            ['Aggravated Assault', 22155],
+            ['Larceny', 24223],
+            ['Motor Vehicle Theft', 12798],
+            ['Arson', 1766],
+            ['Forgery', 957],
+            ['Other Assaults', 96523],
+            ['Vandalism', 28842],
+            ['Possession of a Weapon', 14384],
+            ['Drug Abuse', 74088],
+            ['Disorderly Conduct', 49041],
+        ],
+        dataLabels: {
+            enabled: false,
+            rotation: -90,
+            color: '#FFFFFF',
+            align: 'right',
+            format: '{point.y:.1f}', // one decimal
+            y: 10, // 10 pixels down from the top
+            style: {
+                fontSize: '13px',
+                fontFamily: 'Verdana, sans-serif'
+            }
+        }
+    }]
+});
+</script>
+<p> The data from the above chart came from <a href="https://ucr.fbi.gov/crime-in-the-u.s/2017/crime-in-the-u.s.-2017/topic-pages/tables/table-41"> the FBI. </a></p>
+
+<div id= 'education'></div>
+
+<h3> Juvenile Crime in 2000 </h3>
+<p> While the above number might seem large, it is less than a quarter of the arrests made in 2000. According to the National Center for Juvenile Justice, 2.3 million minors were arrested almost two decades ago. This is a difficult number to grasp, but is important to grapple with as we continue to seek rehabilitative and educational sanctions for criminal behavior.
+
+  <p> The chart below compares the trends in 2017 to those of 2000. </p>
+
+<div id= "comparison"></div>
+<script>
+
+Highcharts.chart('comparison', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: '2000 v. 2017 Juvenile Criminal Offenses'
+    },
+    subtitle: {
+        text: 'Source: The U.S. Department of Justice: Office of Juvenile Justice and Delinquency Prevention<a href="https://www.ncjrs.gov/pdffiles1/ojjdp/191729.pdf"> - Juvenile Justice Bulletin</a>'
+      },
+    xAxis: {
+        categories: ['Rape', 'Robbery', 'Aggravated Assault', 'Larceny', 'Motor Vehicle Theft', 'Arson', 'Forgery', 'Other Assaults', 'Vandalism', 'Possession of a Weapon', 'Drug Abuse', 'Disorderly Conduct']
+    },
+    yAxis: {
+        min: 700,
+        title: {
+            text: 'Total number of offenses'
+        }
+    },
+    legend: {
+        reversed: true
+    },
+    plotOptions: {
+        series: {
+            stacking: 'normal'
+        }
+    },
+    series: [{
+        name: '2000',
+        data: [17400,26800, 66300, 363500,50800, 8700,6400,236800, 114100,37600, 203900, 165700]
+    }, {
+        name: '2007',
+        data: [3030, 15282, 22155, 24223, 12798, 1766, 957, 96523, 28842, 14384, 74088, 49041]
+    }]
+});
+</script>
+
+<p> All data from the above chart came from <a href="https://www.ncjrs.gov/pdffiles1/ojjdp/191729.pdf"> The U.S. Department of Justice </a> and <a href="https://ucr.fbi.gov/crime-in-the-u.s/2017/crime-in-the-u.s.-2017/topic-pages/tables/table-41">The FBI.</a></p>
+
+<h3> Now What? </h3>
+
+<p> What can we attribute the declining rates of juvenile crime to? <a href="https://jjie.org/2015/02/26/ncjj-report-shows-juvenile-crime-keeps-falling-but-reasons-elusive/"> The Juvenile Justice Information Exchange</a> seems to think it could be due to "more attention being paid to child welfare." Claims that increasingly realistic violent video games are affecting juvenile crime cannot hold up against the declining trend. While this - thankfully - declining trend continues, the Juvenile Justice Information Exchange still urges people to consider that black and Latinx children still make up a disproportionate number of juvenile inmates. </p>
+<p> Keep up with our coverage of the story as we interview two Floridian juvenile inmates next week. </p>
+
+
+</body>
+</html>
